@@ -1,0 +1,253 @@
+{
+    "msg": "",
+    "data": [
+        {
+            "id": 1,
+            "uri": "/home",
+            "pName": "首页",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 11,
+                    "uri": "home",
+                    "pName": "首页",
+                    "pIcon": null,
+                    "parentId": 1,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 2,
+            "uri": "/test",
+            "pName": "技能实践",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 21,
+                    "uri": "test",
+                    "pName": "技能实践",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 3,
+            "uri": "/print",
+            "pName": "打印功能",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 31,
+                    "uri": "lodopprint",
+                    "pName": "Lodop打印",
+                    "pIcon": null,
+                    "parentId": 3,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 32,
+                    "uri": "browserprint",
+                    "pName": "浏览器打印",
+                    "pIcon": null,
+                    "parentId": 3,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 4,
+            "uri": "/video",
+            "pName": "视频开发",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 41,
+                    "uri": "hikvision",
+                    "pName": "海康视频",
+                    "pIcon": null,
+                    "parentId": 3,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 5,
+            "uri": "/edit",
+            "pName": "富文本编辑",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 51,
+                    "uri": "edit",
+                    "pName": "富文本编辑",
+                    "pIcon": null,
+                    "parentId": 3,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 6,
+            "uri": "/weatherservice",
+            "pName": "气象服务",
+            "pIcon": "",
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 61,
+                    "uri": "weatherservice",
+                    "pName": "气象服务",
+                    "pIcon": null,
+                    "parentId": 3,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        },
+        {
+            "id": 4,
+            "uri": "/manage",
+            "pName": "系统管理",
+            "pIcon": null,
+            "parentId": 0,
+            "permission": null,
+            "children": [
+                {
+                    "id": 41,
+                    "uri": "user",
+                    "pName": "用户管理",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 42,
+                    "uri": "role",
+                    "pName": "角色管理",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 43,
+                    "uri": "source",
+                    "pName": "资源管理",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 44,
+                    "uri": "dict",
+                    "pName": "字典管理",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 45,
+                    "uri": "administrative",
+                    "pName": "行政区划",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                },
+                {
+                    "id": 46,
+                    "uri": "department",
+                    "pName": "部门管理",
+                    "pIcon": null,
+                    "parentId": 2,
+                    "permission": null,
+                    "children": [],
+                    "label": null,
+                    "rid": 0,
+                    "readerCount": 0
+                }
+            ],
+            "label": null,
+            "rid": 0,
+            "readerCount": 0
+        }
+    ],
+    "success": true
+}
