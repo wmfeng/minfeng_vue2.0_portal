@@ -5,6 +5,7 @@
         <router-view :key="key"></router-view>
       </keep-alive>
     </transition>
+    <foot></foot> 
   </el-scrollbar>
   <div class="tagBar" v-else>
     <el-tabs v-model="name" type="card" closable @tab-click="handleClick" @tab-remove="delVisited">
@@ -23,8 +24,12 @@
 <script>
 import { mapMutations } from "vuex";
 import { mapGetters } from "vuex";
+import foot from "@/views/layout/foot"
 export default {
   name: "tabsBar",
+  components: {
+    foot
+  },
   props: {
     singleAlive: Boolean //是否启用唯一组件keep-alive,默认false,置为true时将只有一个组件处于keep-alive状态,同时隐藏tabsBar一栏
   },

@@ -1,10 +1,9 @@
 <template>
   <div class="logoBar">
     <div class="logo">
-      <i class="el-icon-goods"></i>
-      vue-template
+      <div class="login">登录</div>
     </div>
-    <headDrop class="drop"></headDrop>
+    <!-- <headDrop class="drop"></headDrop> -->
   </div>
 </template>
 
@@ -21,16 +20,23 @@ export default {
 @import "../../assets/style/variable.scss";
 .logoBar {
   height: $logoHeight;
-  background-color: $color;
+  // background-color: $color;
   .logo {
-    float: left;
-    width: 50%;
-    height: 100%;
-    padding-left: 50px;
-    font-size: 40px;
+    float: right;
+    padding-right: 40vh;
+    font-size: 16px;
     font-weight: bold;
-    color: #fff;
-    line-height: $logoHeight;
+    .login {
+      width: 80px;
+      height: 30px;
+      color: #15986c;
+      text-align: center;
+      background-color: #fff;
+      line-height: 30px;
+      border-radius: 35px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
   }
 }
 </style>

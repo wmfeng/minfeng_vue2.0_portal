@@ -1,10 +1,13 @@
 <template>
   <div class="layout">
-    <logoBar></logoBar>
-    <navBar class="layout_navBar" mode="horizontal"></navBar>
+    <div class="layout_top">
+      <logoBar></logoBar>
+      <navBar class="layout_navBar" mode="horizontal"></navBar>
+    </div>
     <div class="layout_body">
       <tabsBar singleAlive></tabsBar>
     </div>
+    <!-- <foot></foot>  -->
   </div>
 </template>
 <script>
@@ -12,13 +15,15 @@ import logoBar from "@/views/layout/logoBar";
 import navBar from "@/views/layout/navBar";
 import breadCrumb from "@/views/layout/breadCrumb";
 import tabsBar from "@/views/layout/tabsBar";
+import foot from "@/views/layout/foot"
 export default {
   name: "layout",
   components: {
     logoBar,
     navBar,
     breadCrumb,
-    tabsBar
+    tabsBar,
+    foot
   }
 };
 </script>
@@ -29,6 +34,9 @@ export default {
   flex-direction: column;
   height: 100vh;
   min-width: 1000px;
+  .layout_top {
+    background-color: #7ecd62;
+  }
   .layout_navBar {
     height: $navHeight;
     border-bottom: none;
@@ -36,6 +44,7 @@ export default {
   .layout_body {
     flex: 1;
     height: 0;
+    background-color: #eef6f4;
   }
 }
 </style>

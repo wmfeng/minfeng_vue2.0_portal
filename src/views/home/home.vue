@@ -1,20 +1,29 @@
 <template>
-  <div class="home">
-    <!-- <img src="file:///C:/Users/gaoyangad/Pictures/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190610094428.jpg" alt /> -->
-  </div>
+  <div class="content">首页</div>
 </template>
 <script>
+import { getFrost } from "@/api/requestMethods";
 export default {
   data() {
     return {};
+  },
+  methods: {
+    // Degree Days Index - Daily - 15 Day（生长度日，热度日冷度日，积温）
+    agriculturalMeteorology() {
+      let url =
+        "/v2/indices/degreeDays/daily/15day?geocode=34.350846,108.952789&language=zh-CN&format=json&apiKey=715688a3fb624aec9688a3fb624aecce";
+      getFrost(url).then(res => {
+        console.log("生长度日，热度日冷度日，积温", res);
+      });
+    }
+  },
+  mounted() {
+    this.agriculturalMeteorology();
   }
 };
 </script>
 <style lang="scss" scoped>
-@import "../../assets/style/variable.scss";
-.home {
-  height: calc(100vh - #{$logoHeight} - 80px);
-  background: url("../../assets/images/home.png") center center no-repeat / 100%
-    100%;
+@import "../../assets/style/common.scss";
+.content {
 }
 </style>

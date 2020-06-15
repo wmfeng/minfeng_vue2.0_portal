@@ -6,128 +6,153 @@ const innerLayout = () =>
 //   import("@/views/layout/layout");
 //横向nav时，打开下句
 const Layout = () =>
-  import ("@/views/layout/layout_horizontal");
+  import("@/views/layout/layout_horizontal");
 
 Vue.use(Router)
 
 export const constantRouterMap = [{
-    path: '/login',
+  path: '/login',
+  component: () =>
+    import("@/views/login/login"),
+  hidden: true
+},
+{
+  path: '/sso/logout',
+  hidden: true,
+  component: () =>
+    import("@/views/login/logout")
+},
+{
+  path: '/404',
+  component: () =>
+    import('@/views/errorPage/404'),
+  hidden: true
+},
+{
+  path: '/',
+  component: Layout,
+  redirect: '/home',
+  hidden: true
+},
+{
+  path: '/home',
+  component: Layout,
+  redirect: '/home/home',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'home',
     component: () =>
-      import("@/views/login/login"),
-    hidden: true
-  },
-  {
-    path: '/sso/logout',
-    hidden: true,
-    component: () =>
-      import("@/views/login/logout")
-  },
-  {
-    path: '/404',
-    component: () =>
-      import('@/views/errorPage/404'),
-    hidden: true
-  },
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/home',
-    hidden: true
-  },
-  {
-    path: '/home',
-    component: Layout,
-    redirect: '/home/home',
+      import("@/views/home/home"),
+    name: 'home',
     meta: {
-      title: '',
-      icon: "el-icon-star-off"
-    },
-    children: [{
-      path: 'home',
-      component: () =>
-        import("@/views/home/home"),
-      name: 'home',
-      meta: {
-        title: '首页',
-        icon: 'home'
-      }
-    }]
-  }, {
-    path: '/manage',
-    component: Layout,
-    redirect: '/manage/user',
+      title: '首页',
+      icon: 'home'
+    }
+  }]
+},
+{
+  path: '/nyqxsk',
+  component: Layout,
+  redirect: '/nyqxsk/nyqxsk',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'nyqxsk',
+    component: () =>
+      import("@/views/nyqxsk/nyqxsk"),
+    name: 'nyqxsk',
     meta: {
-      title: '系统管理',
-      // icon: ['system.png', 'system-c.png'],
-      icon: "el-icon-setting",
-      rid: ""
-    },
-    children: [{
-      path: 'user',
-      component: () =>
-        import("@/views/manage/user"),
-      name: 'user',
-      meta: {
-        title: '用户管理',
-        icon: '',
-        rid: "-1"
-      }
-    }, {
-      path: 'role',
-      component: () =>
-        import("@/views/manage/role"),
-      name: 'role',
-      meta: {
-        title: '角色管理',
-        icon: '',
-        rid: "-1"
-      }
-    }, {
-      path: 'source',
-      component: () =>
-        import("@/views/manage/source"),
-      name: 'source',
-      meta: {
-        title: '资源管理',
-        icon: '',
-        rid: "-1"
-      }
-    }, {
-      path: 'dict',
-      component: () =>
-        import("@/views/manage/dict"),
-      name: 'dict',
-      meta: {
-        title: '字典管理',
-        icon: '',
-        rid: "-1"
-      }
-    }, {
-      path: 'administrative',
-      component: () =>
-        import("@/views/manage/administrative"),
-      name: 'administrative',
-      meta: {
-        title: '行政区划',
-        icon: '',
-        rid: "-1"
-      }
-    }, {
-      path: 'department',
-      component: () =>
-        import("@/views/manage/department"),
-      name: 'department',
-      meta: {
-        title: '部门管理',
-        icon: '',
-        rid: "-1"
-      }
-    }]
-  }, {
-    path: '*',
-    redirect: '/404',
-    hidden: true
-  }
+      title: '农业气象实况',
+      icon: 'nyqxsk'
+    }
+  }]
+},
+{
+  path: '/nyqxls',
+  component: Layout,
+  redirect: '/nyqxls/nyqxls',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'nyqxls',
+    component: () =>
+      import("@/views/nyqxls/nyqxls"),
+    name: 'nyqxls',
+    meta: {
+      title: '农业气象历史',
+      icon: 'nyqxls'
+    }
+  }]
+},
+{
+  path: '/nqjcyj',
+  component: Layout,
+  redirect: '/nqjcyj/nqjcyj',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'nqjcyj',
+    component: () =>
+      import("@/views/nqjcyj/nqjcyj"),
+    name: 'nqjcyj',
+    meta: {
+      title: '农情监测预警',
+      icon: 'nqjcyj'
+    }
+  }]
+},
+{
+  path: '/nyqxyzt',
+  component: Layout,
+  redirect: '/nyqxyzt/nyqxyzt',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'nyqxyzt',
+    component: () =>
+      import("@/views/nyqxyzt/nyqxyzt"),
+    name: 'nyqxyzt',
+    meta: {
+      title: '农业气象一张图',
+      icon: 'nyqxyzt'
+    }
+  }]
+},
+{
+  path: '/grzx',
+  component: Layout,
+  redirect: '/grzx/grzx',
+  meta: {
+    title: '',
+    icon: "el-icon-star-off"
+  },
+  children: [{
+    path: 'grzx',
+    component: () =>
+      import("@/views/grzx/grzx"),
+    name: 'grzx',
+    meta: {
+      title: '个人中心',
+      icon: 'grzx'
+    }
+  }]
+},
+{
+  path: '*',
+  redirect: '/404',
+  hidden: true
+}
 ]
 export default new Router({
   // mode: "history",//浏览模式切换

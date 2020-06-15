@@ -6,7 +6,7 @@
     :mode="mode"
     :collapse="mode=='vertical'"
     :default-active="$route.path"
-    background-color="#313437"
+    background-color="#1a966a"
     text-color="#fff"
   >
     <el-menu-item index class="navBar_title" @click="collapse" v-if="mode=='vertical'">
@@ -47,9 +47,11 @@ export default {
   height: 100%;
   &.hori {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 40vh;
     li {
       float: right;
+      font-size: 16px;
     }
   }
 }
@@ -83,8 +85,10 @@ export default {
 }
 
 .el-menu--horizontal > .el-menu-item.is-active {
-    border-bottom: 2px solid #00b09e;
+    border-bottom: 5px solid #fdcf00;
     color: #fff;
+    font-size: 16px;
+    font-weight: 800;
 }
 .el-menu--popup-bottom-start {
     margin-top: 5px;
