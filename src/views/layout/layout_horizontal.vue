@@ -2,7 +2,9 @@
   <div class="layout">
     <div class="layout_top">
       <logoBar></logoBar>
-      <navBar class="layout_navBar" mode="horizontal"></navBar>
+      <div style="width:100%;background-color:#1d976c;">
+        <navBar class="layout_navBar" mode="horizontal"></navBar>
+      </div>
     </div>
     <div class="layout_body">
       <tabsBar singleAlive></tabsBar>
@@ -40,6 +42,8 @@ export default {
   .layout_navBar {
     height: $navHeight;
     border-bottom: none;
+    width: 62%;
+    margin: 0 auto;
   }
   .layout_body {
     flex: 1;

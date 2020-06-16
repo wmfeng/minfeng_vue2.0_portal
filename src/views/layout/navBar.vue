@@ -48,7 +48,6 @@ export default {
   &.hori {
     display: flex;
     justify-content: flex-start;
-    padding-left: 40vh;
     li {
       float: right;
       font-size: 16px;
